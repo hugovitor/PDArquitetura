@@ -1,0 +1,43 @@
+.blogPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero {
+  padding: 5rem 0 4rem 0;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.listSection {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+  }
+  .listSection {
+    padding: 4rem 0;
+  }
+}

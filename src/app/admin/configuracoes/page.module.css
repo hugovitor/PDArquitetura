@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.settingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settingItem {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+.settingItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .settingItem {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+.settingMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.settingKey {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.settingDesc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.settingActionRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.settingInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  font-size: 0.9375rem;
+  transition: var(--transition-fast);
+}
+
+.settingInput:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px var(--accent-gold-light);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.spinner {
+  color: var(--accent-gold);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 4rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptyNote {
+  font-size: 0.8125rem;
+  max-width: 450px;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}

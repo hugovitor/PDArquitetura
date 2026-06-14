@@ -1,0 +1,127 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.filterTabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+.filterBtn {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.5rem 1.25rem;
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.filterBtn:hover {
+  color: var(--accent-gold);
+}
+
+.filterBtn.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-gold);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.card:hover .img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.categoryBadge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background-color: rgba(26, 27, 28, 0.7);
+  padding: 0.35rem 0.85rem;
+  backdrop-filter: blur(4px);
+}
+
+.info h3 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem;
+  background-color: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  color: var(--text-secondary);
+}

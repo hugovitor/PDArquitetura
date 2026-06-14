@@ -1,0 +1,373 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--bg-secondary);
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.schedulerHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.headerDesc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 3rem;
+  box-shadow: var(--shadow-medium);
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.pickerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitleSmall {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.iconGold {
+  color: var(--accent-gold);
+}
+
+.dateGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .dateGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dateBtn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  transition: var(--transition-smooth);
+}
+
+.dateBtn:hover {
+  border-color: var(--accent-gold);
+  background: var(--bg-primary);
+}
+
+.dateBtn.selected {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.dateDay {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dateWeekday {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.timeBtn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.875rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.timeBtn:hover {
+  border-color: var(--accent-gold);
+  background: var(--bg-primary);
+}
+
+.timeBtn.selected {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.emptyText {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-style: italic;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+/* Step 2 - Form */
+.selectionSummary {
+  display: flex;
+  gap: 2rem;
+  background: var(--bg-secondary);
+  padding: 1.25rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: var(--accent-gold);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 2px var(--accent-gold-light);
+}
+
+.errorText {
+  color: #c0392b;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.backBtn {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--accent-gold);
+}
+
+/* Success State */
+.successState {
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.successBadge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(197, 168, 128, 0.1);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--accent-gold);
+}
+
+.successState h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.successIntro {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.meetingDetails {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  text-align: left;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.detailsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailsItem strong {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.detailsItem span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.meetLinkBox {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.meetLinkBox strong {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.meetLinkBox p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.successNote {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.75rem;
+  }
+  .successState h3 {
+    font-size: 1.65rem;
+  }
+  .meetingDetails {
+    padding: 1.5rem;
+  }
+}

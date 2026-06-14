@@ -1,49 +1,214 @@
+/* Design System - Palloma Duarte Arquitetura */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores Principais */
+  --bg-primary: #FAF9F6;      /* Off-White */
+  --bg-secondary: #F4EFEA;    /* Beige Neutro */
+  --bg-dark: #1A1B1C;         /* Grafite */
+  --bg-dark-accent: #252627;
+  
+  --text-primary: #1A1B1C;    /* Grafite */
+  --text-secondary: #6E6D6A;  /* Grafite Muted */
+  --text-light: #FAF9F6;      /* Off-White */
+  --text-light-muted: #BCBBAF;
+  
+  --accent-gold: #C5A880;     /* Ouro Acetinado */
+  --accent-gold-hover: #B4966F;
+  --accent-gold-light: #E7DECF;
+  
+  /* Bordas e Divisores */
+  --border-color: rgba(26, 27, 28, 0.08);
+  --border-color-light: rgba(26, 27, 28, 0.04);
+  --border-dark: rgba(250, 249, 246, 0.1);
+  
+  /* Sombras */
+  --shadow-subtle: 0 4px 20px rgba(26, 27, 28, 0.03);
+  --shadow-medium: 0 12px 40px rgba(26, 27, 28, 0.06);
+  --shadow-lux: 0 20px 50px rgba(0, 0, 0, 0.15);
+  
+  /* Transições */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.2s ease;
+  
+  /* Layout */
+  --container-max-width: 1280px;
+  --header-height: 80px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Reset Geral */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
+  transition: var(--transition-fast);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Botões */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Input & Select & Textarea */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+/* Layout Utilitários */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Botões Estilizados */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 1rem 2.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-gold);
+  transition: var(--transition-smooth);
+}
+
+.btn-gold:hover {
+  background-color: transparent;
+  color: var(--accent-gold);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 1rem 2.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.btn-outline:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-light);
+  padding: 1rem 2.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--text-light);
+  transition: var(--transition-smooth);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--text-light);
+  color: var(--bg-dark);
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Classes utilitárias de animação simples */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
