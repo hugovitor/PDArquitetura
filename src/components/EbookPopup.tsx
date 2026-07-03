@@ -103,7 +103,7 @@ export default function EbookPopup() {
                   Seu e-book está pronto. Nossa arquiteta entrará em contato pelo WhatsApp para enviar o material e tirar suas dúvidas.
                 </p>
                 <a
-                  href="https://wa.me/5551999998888?text=Ol%C3%A1!%20Quero%20receber%20o%20Guia%20de%20Reformas%20Premium."
+                  href="https://wa.me/5561996021524?text=Ol%C3%A1!%20Quero%20receber%20o%20Guia%20de%20Reformas%20Premium."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold"

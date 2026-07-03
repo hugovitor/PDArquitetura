@@ -144,7 +144,7 @@ export default function BudgetCalculator() {
                   <input
                     id="calc-phone"
                     type="tel"
-                    placeholder="Ex: (51) 99999-8888"
+                    placeholder="Ex: (61) 99602-1524"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className={styles.input}
@@ -177,7 +177,7 @@ export default function BudgetCalculator() {
               </p>
               <div className={styles.resultActions}>
                 <a
-                  href={`https://wa.me/5551999998888?text=${encodeURIComponent(whatsappMsg)}`}
+                  href={`https://wa.me/5561996021524?text=${encodeURIComponent(whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold"

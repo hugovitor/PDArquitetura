@@ -6,9 +6,9 @@ import { Mail, Phone, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import MeetingScheduler from '@/components/MeetingScheduler';
 import styles from './page.module.css';
 
-const CONTACT_EMAIL = 'contato@pdarquitetura.com.br';
-const CONTACT_PHONE = '(51) 99999-8888';
-const CONTACT_ADDRESS = 'Av. Carlos Gomes, 1000 - Bela Vista, Porto Alegre - RS';
+const CONTACT_EMAIL = 'pallomaduartearquitetura@gmail.com';
+const CONTACT_PHONE = '(61) 99602-1524';
+const CONTACT_ADDRESS = 'Brasília, Vicente Pires DF';
 
 export default function ContatoPage() {
   const [activeTab, setActiveTab] = useState<'schedule' | 'message'>('schedule');
@@ -96,7 +96,7 @@ export default function ContatoPage() {
                   </div>
                   <div>
                     <strong>Telefone / WhatsApp</strong>
-                    <a href={`https://wa.me/5551999998888`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/5561996021524`} target="_blank" rel="noopener noreferrer">
                       {CONTACT_PHONE}
                     </a>
                   </div>
@@ -194,7 +194,7 @@ export default function ContatoPage() {
                             <input
                               id="contact-phone"
                               type="tel"
-                              placeholder="Ex: (51) 99999-8888"
+                              placeholder="Ex: (61) 99602-1524"
                               value={phone}
                               onChange={(e) => setPhone(e.target.value)}
                               required
@@ -205,7 +205,7 @@ export default function ContatoPage() {
                             <input
                               id="contact-email"
                               type="email"
-                              placeholder="Ex: contato@pdarquitetura.com.br"
+                              placeholder="Ex: pallomaduartearquitetura@gmail.com"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               required

@@ -62,15 +62,15 @@ export default function Footer() {
             <ul className={styles.contactList}>
               <li>
                 <MapPin size={18} className={styles.contactIcon} />
-                <span>Av. Carlos Gomes, 1000 - Sala 802, Porto Alegre - RS</span>
+                <span>Brasília, Vicente Pires DF</span>
               </li>
               <li>
                 <Phone size={18} className={styles.contactIcon} />
-                <a href="tel:+5551999998888">+55 (51) 99999-8888</a>
+                <a href="tel:+5561996021524">+55 (61) 99602-1524</a>
               </li>
               <li>
                 <Mail size={18} className={styles.contactIcon} />
-                <a href="mailto:contato@pallomaduarte.com">contato@pallomaduarte.com</a>
+                <a href="mailto:pallomaduartearquitetura@gmail.com">pallomaduartearquitetura@gmail.com</a>
               </li>
             </ul>
           </div>

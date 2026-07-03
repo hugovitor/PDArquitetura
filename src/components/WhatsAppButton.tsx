@@ -3,7 +3,7 @@
 import { MessageCircle } from 'lucide-react';
 import styles from './WhatsAppButton.module.css';
 
-const WHATSAPP_NUMBER = '5551999998888';
+const WHATSAPP_NUMBER = '5561996021524';
 const WHATSAPP_MSG = 'Olá! Gostaria de saber mais sobre os serviços de arquitetura.';
 
 export default function WhatsAppButton() {

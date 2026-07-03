@@ -266,7 +266,7 @@ export default function MeetingScheduler({ initialLeadData }: MeetingSchedulerPr
                       <input
                         id="sched-phone"
                         type="tel"
-                        placeholder="Ex: (51) 99999-8888"
+                        placeholder="Ex: (61) 99602-1524"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required
@@ -279,7 +279,7 @@ export default function MeetingScheduler({ initialLeadData }: MeetingSchedulerPr
                     <input
                       id="sched-email"
                       type="email"
-                      placeholder="Ex: contato@pdarquitetura.com.br"
+                      placeholder="Ex: pallomaduartearquitetura@gmail.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
