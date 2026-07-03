@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
   },
   verification: {
-    google: "18nTUz3nh_yD-nx-4fC5xYAP3TI5PXo4GLwN95hTWvs",
+    google: "nq1zuKd3DIaYrtG0vLG00Ye3pqfKqDQYSPqWxsXlYLk",
   }
 };
 
