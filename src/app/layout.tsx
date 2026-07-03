@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: "Espaços sofisticados e exclusivos. Transforme seu lar ou negócio com projetos personalizados de arquitetura e design de interiores.",
     type: "website",
     locale: "pt_BR",
+  },
+  verification: {
+    google: "18nTUz3nh_yD-nx-4fC5xYAP3TI5PXo4GLwN95hTWvs",
   }
 };
 
