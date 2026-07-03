@@ -31,7 +31,7 @@ export default function SobrePage() {
             <div className={styles.profileImgCol}>
               <div className={styles.imgContainer}>
                 <Image
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200"
+                  src="/palloma-duarte.jpg"
                   alt="Palloma Duarte - Arquiteta Principal"
                   fill
                   style={{ objectFit: 'cover' }}
