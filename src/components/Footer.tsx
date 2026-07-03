@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className={styles.socials}>
               <a 
-                href="https://instagram.com/pallomaduarte.arq" 
+                href="https://www.instagram.com/pallomaduarte.arq/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Instagram"

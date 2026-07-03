@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Award, AwardIcon, Compass, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -39,7 +39,7 @@ export default function SobrePage() {
               </div>
               <div className={styles.signatureBox}>
                 <strong>Palloma Duarte</strong>
-                <span>Arquiteta e Urbanista — CAU A99988-7</span>
+                <span>Arquiteta e Urbanista</span>
               </div>
             </div>
             <div className={styles.profileTextCol}>
@@ -97,32 +97,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Awards Section */}
-      <section className={styles.awards}>
-        <div className="container">
-          <div className={styles.awardsHeader}>
-            <span className="section-subtitle">Premiações & Reconhecimento</span>
-            <h2>Destaques na Trajetória</h2>
-          </div>
-          <div className={styles.awardsGrid}>
-            <div className={styles.awardCard}>
-              <Award size={32} className={styles.iconGold} />
-              <h3>Prêmio Destaque Decor — 2024</h3>
-              <p>Reconhecimento pelo projeto residencial inovador e sustentável Penthouse Bela Vista.</p>
-            </div>
-            <div className={styles.awardCard}>
-              <Compass size={32} className={styles.iconGold} />
-              <h3>Bienal de Arquitetura (Mostra RS) — 2023</h3>
-              <p>Menção honrosa na categoria Design Corporativo e Clínicas Inovadoras.</p>
-            </div>
-            <div className={styles.awardCard}>
-              <Sparkles size={32} className={styles.iconGold} />
-              <h3>Mostra Casa Cor (Destaque Living) — 2022</h3>
-              <p>Espaço Living Gourmet premiado pela melhor integração de acabamentos naturais.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Final CTA */}
       <section className={styles.cta}>

@@ -128,7 +128,7 @@ export default function ContatoPage() {
                   </div>
                   <div>
                     <strong>Instagram Editorial</strong>
-                    <a href="https://instagram.com/pallomaduarte.arq" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/pallomaduarte.arq/" target="_blank" rel="noopener noreferrer">
                       @pallomaduarte.arq
                     </a>
                   </div>
