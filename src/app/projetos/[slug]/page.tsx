@@ -8,47 +8,21 @@ import styles from './page.module.css';
 
 // Fallback project data
 const defaultProjects: Record<string, any> = {
-  'penthouse-bela-vista': {
-    title: 'Penthouse Bela Vista',
+  'apartamento-vicente-pires': {
+    title: 'Apartamento Vicente Pires',
     category: 'residencial',
-    city: 'Porto Alegre',
-    area: 280,
-    year: 2024,
-    main_image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
+    city: 'Brasília - DF',
+    area: 110,
+    year: 2025,
+    main_image: '/projects/res-1.png',
     gallery: [
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800'
+      '/projects/res-1.png',
+      '/projects/res-2.png',
+      '/projects/res-3.jpg',
+      '/projects/res-4.jpg',
+      '/projects/res-5.jpg'
     ],
-    before_image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
-    after_image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
-    description: 'A Penthouse Bela Vista foi planejada sob a ótica da integração máxima dos ambientes sociais, mantendo a privacidade da área íntima. O uso de mármore Travertino Romano bruto no painel principal, combinado com painéis de madeira nogueira natural e iluminação linear oculta, define a assinatura do design de luxo discreto deste apartamento de cobertura.'
-  },
-  'clinica-dermato-dr': {
-    title: 'Clínica Dermatológica D&R',
-    category: 'clinicas_consultorios',
-    city: 'São Paulo',
-    area: 120,
-    year: 2023,
-    main_image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1584515901387-a7a1a6373142?auto=format&fit=crop&q=80&w=800'
-    ],
-    description: 'Projetar um espaço de saúde exige rigor sanitário e profunda ergonomia, mas a Clínica D&R vai além: o conceito criativo se assemelha a um spa boutique de luxo. A paleta Off-White, as formas orgânicas esculpidas no gesso, as texturas de pedras nobres e a marcenaria curva transmitem tranquilidade, assepsia e credibilidade médica instantânea.'
-  },
-  'residencia-terras-verdes': {
-    title: 'Residência Terras Verdes',
-    category: 'residencial',
-    city: 'Caxias do Sul',
-    area: 450,
-    year: 2022,
-    main_image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800'
-    ],
-    description: 'Esta residência de veraneio explora a relação direta entre o interior sofisticado e as vistas exuberantes da serra. Estruturada em concreto aparente e fechamentos em grandes vãos de vidro térmico, a casa conta com marcenaria integrada e lareira central suspensa em chapa de ferro naval oxidado.'
+    description: 'Este projeto de interiores residencial em Brasília (Vicente Pires) foi concebido para otimizar os espaços integrados de estar, jantar e cozinha. Destaca-se o uso de painéis ripados de madeira natural que criam uma divisória elegante e acolhedora, aliando funcionalidade e estética de alto padrão. A iluminação linear em LED embutida na marcenaria Off-White confere sofisticação e conforto visual a todo o ambiente.'
   }
 };
 

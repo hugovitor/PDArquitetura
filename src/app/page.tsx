@@ -12,47 +12,21 @@ import styles from './page.module.css';
 const defaultProjects = [
   {
     id: '1',
-    title: 'Penthouse Bela Vista',
-    slug: 'penthouse-bela-vista',
+    title: 'Apartamento Vicente Pires',
+    slug: 'apartamento-vicente-pires',
     category: 'residencial',
-    city: 'Porto Alegre',
-    area: 280,
-    main_image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
-    description: 'Reforma completa de cobertura linear focando na integração social e materiais nobres.'
-  },
-  {
-    id: '2',
-    title: 'Clínica Dermatológica D&R',
-    slug: 'clinica-dermato-dr',
-    category: 'clinica',
-    city: 'São Paulo',
-    area: 120,
-    main_image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200',
-    description: 'Espaço clínico projetado para transmitir bem-estar, assepsia e extremo luxo.'
-  },
-  {
-    id: '3',
-    title: 'Residência Terras Verdes',
-    slug: 'residencia-terras-verdes',
-    category: 'residencial',
-    city: 'Caxias do Sul',
-    area: 450,
-    main_image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
-    description: 'Casa contemporânea com forte presença de concreto aparente, madeira e vidro.'
+    city: 'Brasília - DF',
+    area: 110,
+    main_image: '/projects/res-1.png',
+    description: 'Projeto de reforma e interiores com integração fluida da cozinha e área social, marcenaria off-white sob medida e detalhes de painéis ripados de madeira natural.'
   }
 ];
 
 const defaultTestimonials = [
   {
     name: 'Carolina & Roberto Schmidt',
-    role: 'Proprietários - Penthouse Bela Vista',
+    role: 'Proprietários - Apto Vicente Pires',
     content: 'O processo com a Palloma foi impecável do início ao fim. Ela conseguiu ler nossos desejos e traduzir em ambientes funcionais que impressionam a todos que nos visitam. Uma experiência de luxo real.',
-    rating: 5
-  },
-  {
-    name: 'Dra. Rebeca Cavalcanti',
-    role: 'Fundadora - Clínica D&R',
-    content: 'Nossos pacientes sempre elogiam o design da clínica. Além de lindo, o fluxo de trabalho dos médicos melhorou 100% devido à ergonomia pensada no layout. Altamente recomendado.',
     rating: 5
   }
 ];
@@ -102,7 +76,7 @@ export default async function Home() {
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroBackground}>
           <Image
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1920"
+            src="/projects/res-2.png"
             alt="Arquitetura de Luxo"
             fill
             priority
@@ -225,7 +199,7 @@ export default async function Home() {
             <div className={styles.transformSlider}>
               <BeforeAfter
                 beforeImage="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200"
-                afterImage="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200"
+                afterImage="/projects/res-2.png"
                 beforeLabel="Antes"
                 afterLabel="Depois"
               />
