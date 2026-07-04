@@ -301,3 +301,29 @@ VALUES
         "default_keywords": "arquitetura de luxo, design de interiores, arquitetura comercial, reforma de alto padrão, porto alegre, arquiteta palloma duarte"
     }'::jsonb
 );
+
+-- =========================================================================
+-- 6. TABELA DE VISUALIZAÇÕES DE PÁGINAS (MÉTRICAS DE ACESSO)
+-- =========================================================================
+CREATE TABLE IF NOT EXISTS public.page_views (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+    url TEXT NOT NULL,
+    referrer TEXT,
+    user_agent TEXT,
+    city TEXT DEFAULT 'Desconhecida',
+    region TEXT DEFAULT 'Desconhecido',
+    country TEXT DEFAULT 'Desconhecido'
+);
+
+-- Habilitar Row Level Security (RLS)
+ALTER TABLE public.page_views ENABLE ROW LEVEL SECURITY;
+
+-- Criar políticas RLS
+-- Permitir que qualquer visitante insira visualizações de página (público)
+CREATE POLICY "Permitir inserções públicas de page_views" ON public.page_views
+    FOR INSERT WITH CHECK (true);
+
+-- Permitir que apenas usuários autenticados (admin) leiam visualizações de página
+CREATE POLICY "Permitir leitura de page_views para administradores" ON public.page_views
+    FOR SELECT TO authenticated USING (true);

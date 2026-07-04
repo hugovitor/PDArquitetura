@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
-import { LayoutDashboard, Users, Grid, FileText, Settings, LogOut, Loader2, MessageSquare } from 'lucide-react';
+import { LayoutDashboard, Users, Grid, FileText, Settings, LogOut, Loader2, MessageSquare, BarChart3 } from 'lucide-react';
 import styles from './layout.module.css';
 
 export default function AdminLayout({
@@ -73,6 +73,7 @@ export default function AdminLayout({
   const menuItems = [
     { label: 'Dashboard', href: '/admin', icon: <LayoutDashboard size={18} /> },
     { label: 'CRM & Leads', href: '/admin/leads', icon: <Users size={18} /> },
+    { label: 'Métricas & Acessos', href: '/admin/metricas', icon: <BarChart3 size={18} /> },
     { label: 'Gerenciar Projetos', href: '/admin/projetos', icon: <Grid size={18} /> },
     { label: 'Gerenciar Blog', href: '/admin/blog', icon: <FileText size={18} /> },
     { label: 'Depoimentos', href: '/admin/depoimentos', icon: <MessageSquare size={18} /> }
