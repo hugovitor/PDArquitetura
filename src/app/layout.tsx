@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import EbookPopup from "@/components/EbookPopup";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import { Analytics } from '@vercel/analytics/react';
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -51,6 +52,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <EbookPopup />
         <ExitIntentPopup />
+        <Analytics />
       </body>
     </html>
   );
