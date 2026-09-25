@@ -78,12 +78,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = await getArticleBySlug(resolvedParams.slug);
   if (!article) {
     return {
-      title: 'Artigo Não Encontrado | Palloma Duarte Arquitetura',
+      title: 'Artigo não encontrado',
     };
   }
   return {
-    title: `${article.seo_title || article.title} | Blog Palloma Duarte`,
+    title: article.seo_title || article.title,
     description: article.seo_description || article.summary,
+    openGraph: {
+      title: article.seo_title || article.title,
+      description: article.seo_description || article.summary,
+      images: article.main_image ? [article.main_image] : undefined,
+    },
   };
 }
 

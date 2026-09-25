@@ -68,15 +68,15 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <Link href="/#simulador" className="btn-gold" style={{ padding: '0.6rem 1.5rem', fontSize: '0.75rem' }}>
-            Simulador <ArrowRight size={14} style={{ marginLeft: '6px' }} />
+          <Link href="/contato" className="btn-gold" style={{ padding: '0.6rem 1.5rem', fontSize: '0.75rem' }}>
+            Agendar <ArrowRight size={14} style={{ marginLeft: '6px' }} />
           </Link>
           
           {/* Mobile Menu Button */}
           <button
             className={styles.mobileToggle}
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -98,11 +98,11 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/#simulador"
+            href="/contato"
             className="btn-gold"
             style={{ marginTop: '2rem', width: '100%' }}
           >
-            Fazer Simulação
+            Agendar conversa
           </Link>
         </nav>
       </div>

@@ -249,7 +249,7 @@ export default function AdminProjectsPage() {
                 <label>Cidade / Localização *</label>
                 <input
                   type="text"
-                  placeholder="Ex: Porto Alegre - RS"
+                  placeholder="Ex: Brasília - DF"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                   required

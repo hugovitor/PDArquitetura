@@ -3,7 +3,7 @@ import ProjectList from '@/components/ProjectList';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: "Portfólio | Palloma Duarte Arquitetura",
+  title: "Portfólio",
   description: "Conheça nossa seleção exclusiva de projetos de alto padrão: residências sofisticadas, clínicas modernas e espaços comerciais e corporativos.",
 };
 
