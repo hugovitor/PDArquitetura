@@ -85,7 +85,6 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Palloma Duarte Arquitetura. Todos os direitos reservados.
           </p>
           <div className={styles.bottomLinks}>
-            <Link href="/admin" className={styles.adminLink}>Acesso Restrito</Link>
             <button 
               onClick={scrollToTop} 
               className={styles.scrollTopBtn} 

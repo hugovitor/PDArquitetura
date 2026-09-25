@@ -3,7 +3,7 @@ import BlogList from '@/components/BlogList';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: "Blog | Palloma Duarte Arquitetura",
+  title: "Blog",
   description: "Dicas de decoração de alto padrão, tendências de arquitetura residencial e comercial, e orientações exclusivas de reforma.",
 };
 

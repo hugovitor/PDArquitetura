@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import CoverImage from '@/components/CoverImage';
 import styles from './ProjectList.module.css';
 
 interface Project {
@@ -59,10 +60,11 @@ export default function ProjectList({ initialProjects }: ProjectListProps) {
               className={styles.card}
             >
               <div className={styles.imgWrapper}>
-                <img
+                <CoverImage
                   src={project.main_image}
                   alt={project.title}
                   className={styles.img}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className={styles.overlay}>
                   <span className={styles.categoryBadge}>

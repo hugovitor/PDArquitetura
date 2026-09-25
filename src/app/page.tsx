@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { supabase } from '@/lib/supabase';
-import { ArrowRight, Compass, Shield, Award, Users, Star } from 'lucide-react';
-import BeforeAfter from '@/components/BeforeAfter';
+import CoverImage from '@/components/CoverImage';
+import { ArrowRight, Compass, Shield, Award, Star } from 'lucide-react';
 import BudgetCalculator from '@/components/BudgetCalculator';
 import ProjectQuiz from '@/components/ProjectQuiz';
 import MeetingScheduler from '@/components/MeetingScheduler';
@@ -156,9 +156,10 @@ export default async function Home() {
                 className={styles.projectCard}
               >
                 <div className={styles.projectImgWrapper}>
-                  <img
+                  <CoverImage
                     src={project.main_image}
                     alt={project.title}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className={styles.projectImg}
                   />
                   <div className={styles.projectOverlay}>
@@ -175,33 +176,28 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Before / After Transformation */}
+      {/* Featured project */}
       <section className={styles.transformation}>
         <div className="container">
           <div className={styles.transformLayout}>
             <div className={styles.transformText}>
-              <span className="section-subtitle">A Arte da Transformação</span>
-              <h2 className="section-title">O Poder do Antes & Depois</h2>
+              <span className="section-subtitle">Projeto em Brasília</span>
+              <h2 className="section-title">Apartamento Vicente Pires</h2>
               <p className={styles.transformDesc}>
-                Arraste o cursor na imagem ao lado para visualizar a evolução completa de um dos nossos principais projetos de reforma de interiores. Veja como convertemos um espaço antigo em uma sala contemporânea sofisticada.
+                Reforma de 110 m² com cozinha integrada à área social, marcenaria off-white sob medida e painéis ripados de madeira natural. Um espaço pensado para o cotidiano, com proporção, luz e materiais que duram.
               </p>
-              <div className={styles.transformMetrics}>
-                <div className={styles.metric}>
-                  <strong>+35%</strong>
-                  <span>Valorização do Imóvel</span>
-                </div>
-                <div className={styles.metric}>
-                  <strong>100%</strong>
-                  <span>Aproveitamento Espacial</span>
-                </div>
-              </div>
+              <Link href="/projetos/apartamento-vicente-pires" className="btn-outline">
+                Ver o projeto
+                <ArrowRight size={16} style={{ marginLeft: '8px' }} />
+              </Link>
             </div>
             <div className={styles.transformSlider}>
-              <BeforeAfter
-                beforeImage="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200"
-                afterImage="/projects/res-2.png"
-                beforeLabel="Antes"
-                afterLabel="Depois"
+              <Image
+                src="/projects/res-2.png"
+                alt="Sala integrada do apartamento Vicente Pires, projeto Palloma Duarte"
+                width={1200}
+                height={800}
+                className={styles.featuredPhoto}
               />
             </div>
           </div>

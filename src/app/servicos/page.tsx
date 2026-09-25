@@ -3,7 +3,7 @@ import { LayoutGrid, Home, Building, ShieldCheck, Palette, Layers, Calendar, Che
 import styles from './page.module.css';
 
 export const metadata = {
-  title: "Serviços | Palloma Duarte Arquitetura",
+  title: "Serviços",
   description: "Explore nossos serviços de arquitetura residencial, comercial, corporativa e clínica de luxo, com acompanhamento ponta a ponta.",
 };
 

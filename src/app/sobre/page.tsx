@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: "Sobre | Palloma Duarte Arquitetura",
+  title: "Sobre",
   description: "Conheça a arquiteta Palloma Duarte, sua trajetória, filosofia de projeto e compromisso com a excelência de alto padrão.",
 };
 

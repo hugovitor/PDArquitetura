@@ -219,6 +219,7 @@
 }
 
 .galleryItem {
+  position: relative;
   overflow: hidden;
   background-color: #eee;
   border: 1px solid var(--border-color);

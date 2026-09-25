@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
+import CoverImage from '@/components/CoverImage';
 import { Calendar, Ruler, MapPin, Grid, ArrowLeft, ArrowRight } from 'lucide-react';
 import BeforeAfter from '@/components/BeforeAfter';
 import styles from './page.module.css';
@@ -54,12 +55,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const project = await getProjectBySlug(resolvedParams.slug);
   if (!project) {
     return {
-      title: 'Projeto Não Encontrado | Palloma Duarte Arquitetura',
+      title: 'Projeto não encontrado',
     };
   }
   return {
-    title: `${project.title} | Palloma Duarte Arquitetura`,
+    title: project.title,
     description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: project.main_image ? [project.main_image] : undefined,
+    },
   };
 }
 
@@ -93,10 +99,12 @@ export default async function ProjectPage({ params }: PageProps) {
       {/* Main Image Header */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
-        <img
+        <CoverImage
           src={project.main_image}
           alt={project.title}
           className={styles.heroImg}
+          sizes="100vw"
+          priority
         />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.categoryBadge}>
@@ -180,10 +188,11 @@ export default async function ProjectPage({ params }: PageProps) {
             <div className={styles.galleryGrid}>
               {project.gallery.map((imgUrl: string, idx: number) => (
                 <div key={idx} className={styles.galleryItem}>
-                  <img
+                  <CoverImage
                     src={imgUrl}
                     alt={`${project.title} - Foto ${idx + 1}`}
                     className={styles.galleryImg}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
               ))}

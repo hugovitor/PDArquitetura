@@ -331,6 +331,13 @@
 .transformSlider {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-medium);
+  overflow: hidden;
+}
+
+.featuredPhoto {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Testimonials Section */
