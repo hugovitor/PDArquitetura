@@ -1,0 +1,18 @@
+{
+  "name": "Palloma Duarte Arquitetura",
+  "snapshot": "snapshot-20260925-44ad5273-34f9-4d5f-854b-8a76efbecda7",
+  "install": "bash .cursor/scripts/install.sh",
+  "start": "bash .cursor/scripts/start-services.sh",
+  "terminals": [
+    {
+      "name": "next-dev",
+      "command": "npm run dev",
+      "description": "Next.js dev server on http://localhost:3000"
+    }
+  ],
+  "ports": [
+    { "port": 3000, "name": "Next.js app" },
+    { "port": 54321, "name": "Supabase API" },
+    { "port": 54323, "name": "Supabase Studio" }
+  ]
+}
